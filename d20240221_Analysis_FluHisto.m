@@ -1,8 +1,8 @@
 %% Infiltration analysis 1
 
-imageDir = 'C:\Users\antho\OneDrive\Desktop\Misc\20240314_Path_x31-4a7KO\Images';
+imageDir = 'C:\Users\antho\OneDrive\Desktop\Misc\20240314_Path_x31-4a7KO\Images';            % Directory containing .tif RGB images
 %objDir = 'C:\Users\antho\OneDrive\Desktop\Misc\20240314_Path_x31-4a7KO\Images\Segmented';
-objDir = 'C:\Users\antho\OneDrive\Desktop\Misc\20240314_Path_x31-4a7KO\Images\Segmented2';
+objDir = 'C:\Users\antho\OneDrive\Desktop\Misc\20240314_Path_x31-4a7KO\Images\Segmented2';    % Directory containing images segmented via ilastik (also .tif format, greyscale)
 
 
 imDirList = dir(imageDir);
