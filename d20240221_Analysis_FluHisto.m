@@ -114,31 +114,3 @@ imwrite(outIm3,'image3.png')
 
 
 
-
-
-%% TMP: rename images
-
-
-%imageDir = 'C:\Users\antho\OneDrive\Desktop\Misc\20240221_Path_4a7-x31KO\Images';
-imageDir = 'C:\Users\antho\OneDrive\Desktop\Misc\20240314_Path_x31-4a7KO\Images';
-
-dirList = dir(imageDir);
-for i = [1:length(dirList)]
-    objName = dirList(i).name;
-    oldFile = [imageDir,'\',objName];
-
-    isTIF = strfind(objName,'.tif');
-    if isempty(isTIF)
-        continue
-    end
-
-    objName = strsplit(objName, '_');
-    objName = [objName{1},'.tif'];
-    newFile = [imageDir,'\',objName];
-
-    movefile(oldFile,newFile);
-end
-
-
-
-
