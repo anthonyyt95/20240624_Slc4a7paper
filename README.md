@@ -22,3 +22,40 @@ The script is divided into two code sections (demarcated by `%%`):
 - Store results in a cell array `output`, with one row per image:  
   ```matlab
   { filename, infilt2lungRatio, totalLungArea, infiltPercOfLung }
+
+
+## How to Run
+
+1. Open the script in MATLAB.
+2. Update the path variables at the top:
+   ```matlab
+   objDir    = '.../Images/Segmented2';
+   imageFile = '.../Images/SF2253.tif';
+   objFile   = '.../Images/ObjectSegm3/SF2253_Simple Segmentation.tif';
+   ```
+3. Run the script.
+   - **Section 1:** Review the `output` cell array for infiltration metrics.
+   - **Section 2:** Locate `original.png`, `image1.png`, `image2.png`, and `image3.png` in the working directory.
+
+---
+
+## Requirements
+
+- MATLAB R2022b or newer
+- Image Processing Toolbox (for `imread`, `imwrite`)
+- Computer Vision Toolbox (for `insertObjectMask`)
+- [Optional] Bio-Formats (`bfmatlab`) for non-standard TIFFs
+
+---
+
+## Notes & Tips
+
+- To preserve intermediate variables, comment out the `clear` statements at the end of Section 1.
+- Batch QC generation by looping over filenames in Section 2.
+- Adjust `Opacity` and `LineWidth` in `insertObjectMask` for finer visualization control.
+
+---
+
+## Author
+
+Anthony Tao
